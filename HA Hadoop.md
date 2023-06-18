@@ -1,7 +1,3 @@
----
-
-
----
 
 <h1 id="ha模式hadoop部署">HA模式Hadoop部署</h1>
 <h1 id="gce-vm配置">GCE VM配置</h1>
