@@ -1,0 +1,836 @@
+Welcome to Ubuntu 18.04.6 LTS (GNU/Linux 5.4.0-1106-gcp x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Sun Jun 18 19:29:18 UTC 2023
+
+  System load:  0.37              Processes:           118
+  Usage of /:   68.8% of 9.51GB   Users logged in:     0
+  Memory usage: 5%                IP address for ens4: 10.128.0.16
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Infrastructure is not enabled.
+
+16 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+25 additional security updates can be applied with ESM Infra.
+Learn more about enabling ESM Infra service for Ubuntu 18.04 at
+https://ubuntu.com/18-04
+
+New release '20.04.6 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Last login: Sun Jun 18 17:31:17 2023 from 35.235.244.33
+clarazhang0625@root:~$ history
+    1  curl https://bootstrap.pypa.io/pip/2.7/get-pip.py -o get-pip.py
+    2  python get-pip.py --user
+    3  pip -V
+    4  apt install python-pip
+    5  sudo yum install -y gcc glibc-devel zlib-devel rpm-build openssl-devel
+    6  apt install python  
+    7  python --version
+    8  sudo apt install python
+    9  python --version
+   10  curl https://bootstrap.pypa.io/pip/2.7/get-pip.py -o get-pip.py
+   11  python get-pip.py --user
+   12  pip -V
+   13  apt install python-pip
+   14  sudo apt install python-pip
+   15  python get-pip.py --user
+   16  nano ~/.bashrc
+   17  pip -V
+   18  source ~/.bashrc
+   19  pip -V
+   20  wget https://releases.ansible.com/ansible/ansible-2.9.27.tar.gz
+   21  tar -xf ansible-2.9.27.tar.gz
+   22  pushd ansible-2.9.27/
+   23  python setup.py build
+   24  sudo python setup.py install
+   25  popd
+   26  ansible --version
+   27  pip install cryptography==3.4.7
+   28  sudo apt update
+   29  sudo apt install ansible
+   30  ansible --version
+   31  ssh-keygen -t rsa -b 3072
+   32  cd
+   33  ssh-keygen -t rsa -b 3072
+   34  cat ~/.ssh/id_rsa.pub
+   35  cat <<EOF >> ~/.ssh/authorized_keys
+   36  ssh-rsa clarazhang0625@10.128.0.17
+   37  EOF
+   38  vim /etc/ssh/ssh_config
+   39  cd
+   40  ls
+   41  rm -r hosts
+   42  nano hosts
+   43  ls
+   44  nano hosts
+   45  rm -r ansible.cfg
+   46  nano ansible.cfg
+   47  ls
+   48  cd conf
+   49  ls
+   50  cd zk
+   51  nano zoo.cfg
+   52  nano myid
+   53  cd
+   54  cd conf/hadoop
+   55  ls
+   56  nano core-site.xml
+   57  nano hdfs-site.xml
+   58  cd conf/hadoop
+   59  ls
+   60  nano hdfs-site.xml
+   61  nano yarn-site.xml
+   62  nano mapred-site.xml
+   63  nano workers
+   64  cd
+   65  cd book
+   66  nano vars.yml
+   67  nano sync-host.yml
+   68  nano install-hadoop.yml
+   69  nano config-zk.yml
+   70  nano config-hadoop.yml
+   71  cd
+   72  ls
+   73  cd repo
+   74  ls
+   75  mkdir -p hadoop
+   76  cd
+   77  vim /etc/ssh/ssh_config
+   78  sudo vim /etc/ssh/ssh_config
+   79  cd hosts
+   80  nano hosts
+   81  cd etc
+   82  cd ~
+   83  cd /etc/
+   84  cd ansible
+   85  ls
+   86  cd hosts
+   87  nano hosts
+   88  sudo ansible-playbook hosts
+   89  chmod +w hosts
+   90  sudo nano hosts
+   91  sudo nano ansible.cfg
+   92  cd book
+   93  ls
+   94  cd
+   95  cd /etc/
+   96  ls
+   97  cd ansible
+   98  ls
+   99  cd book
+  100  mkdir -p book
+  101  sudo mkdir -p book
+  102  sudo nano sync-host.yml
+  103  sudo nano install-hadoop.yml
+  104  ls
+  105  sudo nano install-hadoop.yml
+  106  cat /path/to/your/file.yml
+  107  cat install-hadoop.yml
+  108  cd book
+  109  sudo nano install-hadoop.yml
+  110  cd ../
+  111  cat sync-hosts.yml
+  112  ls
+  113  cat sync-host.yml
+  114  cd book
+  115  sudo nano sync-host.yml
+  116  cd ../
+  117  ls
+  118  rm install-hadoop.yml
+  119  rm sync-host.yml
+  120  ls
+  121  rm install-hadoop.yml
+  122  sudo rm install-hadoop.yml
+  123  sudo rm sync-host.yml
+  124  cd book
+  125  ls
+  126  cd ../
+  127  ansible-playbook book/sync-host.yml
+  128  sudo nano book/sync-host.yml
+  129  ansible-playbook book/sync-host.yml
+  130  sudo nano hosts
+  131  ansible-playbook book/sync-host.yml
+  132  ssh-keygen -t rsa -b 3072
+  133  cat ~/.ssh/id_rsa.pub
+  134  cat <<EOF >> ~/.ssh/authorized_keys
+  135  ssh-rsa clarazhang0625@10.128.0.17
+  136  ssh-rsa clarazhang0625@10.128.0.18
+  137  ssh-rsa clarazhang0625@10.128.0.19
+  138  ssh-rsa clarazhang0625@10.128.0.20
+  139  EOF
+  140  ansible-playbook book/sync-host.yml
+  141  ssh clarazhang@10.128.0.17
+  142  sudo nano book/sync-host.yml
+  143  sudo nano hosts
+  144  sudo nano book/sync-host.yml
+  145  ssh clarazhang@10.128.0.17
+  146  ssh clarazhang0625@10.128.0.17
+  147  ssh-copy-id -i ~/.ssh/id_rsa.pub clarazhang0625@10.128.0.17
+  148  ssh-copy-id -i ~/.ssh/id_rsa.pub clarazhang0625@10.128.0.18
+  149  ssh clarazhang0625@10.128.0.17
+  150  cd /etc
+  151  cd ansible
+  152  ansible-playbook book/sync-host.yml
+  153  sudo nano hosts
+  154  ansible-playbook book/sync-host.yml
+  155  sudo nano hosts
+  156  cd book
+  157  sudo nano config-zk.yml
+  158  cd ../
+  159  ansible-playbook book/config-zk.yml
+  160  sudo ansible-playbook book/config-zk.yml
+  161  cd
+  162  vim /etc/ssh/ssh_config
+  163  pip -V
+  164  sudo yum install -y gcc glibc-devel zlib-devel rpm-build openssl-devel
+  165  sudo apt install -y gcc libc-dev zlib1g-dev rpm openssl libssl-dev
+  166  sudo apt install -y python-devel python-yaml python-jinja2 python2-jmespath
+  167  sudo apt install -y python-dev python-yaml python-jinja2 python-pip
+  168  ansible --version
+  169  cd /etc/ansible
+  170  ansible-playbook book/config-zk.yml
+  171  clarazhang0625@root:/etc/ansible$ ansible-playbook book/config-zk.yml
+  172  PLAY [Change Zk Config] *****************************************************************************************************************************************************
+  173  TASK [Create data directory] ************************************************************************************************************************************************
+  174  failed: [my.zk2] (item=/opt/zookeeper/status/data) => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python3"}, "ansible_loop_var": "item", "changed": false, "item": "/opt/zookeeper/status/data", "msg": "There was an issue creating /opt/zookeeper as requested: [Errno 13] Permission denied: b'/opt/zookeeper'", "path": "/opt/zookeeper/status/data"}
+  175  failed: [my.zk3] (item=/opt/zookeeper/status/data) => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python3"}, "ansible_loop_var": "item", "changed": false, "item": "/opt/zookeeper/status/data", "msg": "There was an issue creating /opt/zookeeper as requested: [Errno 13] Permission denied: b'/opt/zookeeper'", "path": "/opt/zookeeper/status/data"}
+  176  failed: [my.zk1] (item=/opt/zookeeper/status/data) => {"ansible_facts": {"discovered_interpreter_python": "/usr/bin/python3"}, "ansible_loop_var": "item", "changed": false, "item": "/opt/zookeeper/status/data", "msg": "There was an issue creating /opt/zookeeper as requested: [Errno 13] Permission denied: b'/opt/zookeeper'", "path": "/opt/zookeeper/status/data"}
+  177  failed: [my.zk2] (item=/opt/zookeeper/status/logs) => {"ansible_loop_var": "item", "changed": false, "item": "/opt/zookeeper/status/logs", "msg": "There was an issue creating /opt/zookeeper as requested: [Errno 13] Permission denied: b'/opt/zookeeper'", "path": "/opt/zookeeper/status/logs"}
+  178  failed: [my.zk3] (item=/opt/zookeeper/status/logs) => {"ansible_loop_var": "item", "changed": false, "item": "/opt/zookeeper/status/logs", "msg": "There was an issue creating /opt/zookeeper as requested: [Errno 13] Permission denied: b'/opt/zookeeper'", "path": "/opt/zookeeper/status/logs"}
+  179  failed: [my.zk1] (item=/opt/zookeeper/status/logs) => {"ansible_loop_var": "item", "changed": false, "item": "/opt/zookeeper/status/logs", "msg": "There was an issue creating /opt/zookeeper as requested: [Errno 13] Permission denied: b'/opt/zookeeper'", "path": "/opt/zookeeper/status/logs"}
+  180  NO MORE HOSTS LEFT **********************************************************************************************************************************************************
+  181  PLAY RECAP ******************************************************************************************************************************************************************
+  182  my.zk1                     : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+  183  my.zk2                     : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+  184  my.zk3                     : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+  185  ansible-playbook book/config-zk.yml
+  186  sudo ansible-playbook book/config-zk.yml
+  187  ≈cd
+  188  ls -ld /opt/zookeeper
+  189  cd
+  190  ls -ld /opt/zookeeper
+  191  cd /opt
+  192  ls
+  193  sudo apt install zookeeper
+  194  sudo systemctl start zookeeper
+  195  cd /opt/zookeeper
+  196  cd
+  197  cd cd /opt/zookeeper
+  198  cd /opt/zookeeper
+  199  cd /opt/
+  200  cd /opt/zookeeper
+  201  ls
+  202  sudo systemctl stop zookeeper
+  203  sudo apt remove zookeeper
+  204  cd
+  205  cd /etc/ansible
+  206  ls
+  207  mkdir -p conf
+  208  sudo mkdir -p conf
+  209  sudo mkdir -p repo
+  210  cd repo
+  211  sudo mkdir -p hadoop
+  212  wget https://downloads.apache.org/zookeeper/zookeeper-3.6.3/apache-zookeeper-3.6.3-bin.tar.gz
+  213  cd hadoop
+  214  wget https://dlcdn.apache.org/zookeeper/zookeeper-3.6.4/apache-zookeeper-3.6.4-bin.tar.gz
+  215  sudo wget https://dlcdn.apache.org/zookeeper/zookeeper-3.6.4/apache-zookeeper-3.6.4-bin.tar.gz
+  216  tar -xzf apache-zookeeper-3.6.3-bin.tar.gz
+  217  tar -xzf apache-zookeeper-3.6.4-bin.tar.gz
+  218  sudo tar -xzf apache-zookeeper-3.6.4-bin.tar.gz
+  219  wget https://downloads.apache.org/hadoop/common/hadoop-3.2.3/hadoop-3.2.3.tar.gz
+  220  sudo wget https://downloads.apache.org/hadoop/common/hadoop-3.2.3/hadoop-3.2.3.tar.gz
+  221  sudo tar xzf hadoop-3.2.3.tar.gz
+  222  sudo wget https://download.java.net/java/GA/jdk17.0.2/0d1cfde4252546c6931946de8db48ee2/8/GPL/OpenJDK17U-jdk_x64_linux_hotspot_17.0.2_8.tar.gz
+  223  sudo wget https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.7%2B7/OpenJDK17U-debugimage_aarch64_linux_hotspot_17.0.7_7.tar.gz
+  224  sudo tar xzf OpenJDK17U-debugimage_aarch64_linux_hotspot_17.0.7_7.tar.gz
+  225  sudo wget http://www.cs.tohoku-gakuin.ac.jp/pub/Tools/OpenJDK/JDK8-HotSpot/OpenJDK8U-jdk_x64_linux_hotspot_8u372b07.tar.gz
+  226  sudo tar xzf OpenJDK8U-jdk_x64_linux_hotspot_8u372b07.tar.gz
+  227  cd ../../
+  228  sudo ansible-playbook book/config-zk.yml
+  229  ssh clarazhang0625@10.128.0.17
+  230  cd /etc/ansible
+  231  sudo nano ansible.cfg
+  232  sudo ansible-playbook book/config-zk.yml
+  233  sudo nano hosts
+  234  ssh clarazhang0625@10.128.0.18
+  235  cd ~/.ssh/
+  236  cat private_key.pem
+  237  ls
+  238  ssh-keygen -t rsa -b 4096
+  239  ls
+  240  cd
+  241  cd /etc/ansible
+  242  ls
+  243  sudo ansible-playbook book/config-zk.yml
+  244  cd book
+  245  sudo nano config-zk.yml
+  246  sudo ansible-playbook book/sync-host.yml
+  247  ls
+  248  sudo ansible-playbook sync-host.yml
+  249  cd
+  250  cd /etc/ansible
+  251  sudo ansible-playbook book/sync-host.yml
+  252  ls
+  253  sudo rm -r repo
+  254  sudo ansible-playbook book/sync-host.yml
+  255  cd ~/.ssh
+  256  ls
+  257  cat id_rsa.pub
+  258  cd
+  259  cd /etc/ansible
+  260  sudo ansible-playbook book/sync-host.yml
+  261  sudo nano book/sync-host.yml
+  262  sudo nano hosts
+  263  sudo ansible-playbook book/sync-host.yml
+  264  cd
+  265  cat ~/.ssh/id_rsa.pub
+  266  cat <<EOF >> ~/.ssh/authorized_keys
+  267  ssh-rsa clarazhang0625@10.128.0.17
+  268  ssh-rsa clarazhang0625@10.128.0.18
+  269  ssh-rsa clarazhang0625@10.128.0.19
+  270  ssh-rsa clarazhang0625@10.128.0.20
+  271  EOF
+  272  cd /etc/ansible
+  273  sudo ansible-playbook book/sync-host.yml
+  274  sudo nano book/sync-host.yml
+  275  cd
+  276  ssh clarazhang0625@10.128.0.17
+  277  sudo apt remove gcc glibc-devel zlib-devel rpm-build openssl-devel
+  278  sudo apt remove python-devel python-yaml python-jinja2 python2-jmespath
+  279  sudo apt remove gcc python-yaml python-jinja2
+  280  sudo apt remove python-jmespath
+  281  cd /etc/ansible
+  282  sudo ansible-playbook book/sync-host.yml
+  283  cd book
+  284  ls
+  285  sudo ansible-playbook book/sync-host.yml
+  286  sudo nano book/sync-host.yml
+  287  cd ../
+  288  sudo nano book/sync-host.yml
+  289  sudo ansible-playbook book/sync-host.yml
+  290  sudo apt install python-yaml
+  291  sudo ansible-playbook book/sync-host.yml
+  292  sudo apt install python-jmespath
+  293  sudo ansible-playbook book/sync-host.yml
+  294  sudo apt install python-jinja2
+  295  sudo ansible-playbook book/sync-host.yml
+  296  history
+  297  sudo apt remove zookeeper
+  298  cd
+  299  sudo apt remove zookeeper
+  300  cd /etc/ansible
+  301  sudo ansible-playbook book/sync-host.yml
+  302  ssh clarazhang0625@10.128.0.18
+  303  at ~/.ssh/id_rsa.pub
+  304  cat ~/.ssh/id_rsa.pub
+  305  cat <<EOF >> ~/.ssh/authorized_keys
+  306  ssh-rsa clarazhang0625@10.128.0.17
+  307  ssh-rsa clarazhang0625@10.128.0.18
+  308  ssh-rsa clarazhang0625@10.128.0.19
+  309  ssh-rsa clarazhang0625@10.128.0.20
+  310  EOF
+  311  vim /etc/ssh/ssh_config
+  312  cat ~/.ssh/id_rsa.pub
+  313  cat <<EOF >> ~/.ssh/authorized_keys
+  314  ssh-rsa clarazhang0625@10.128.0.20
+  315   ssh-rsa clarazhang0625@10.128.0.19
+  316   ssh-rsa clarazhang0625@10.128.0.18
+  317   ssh-rsa clarazhang0625@10.128.0.17
+  318  EOF
+  319  cat ~/.ssh/id_rsa.pub
+  320  cd /etc/ansible
+  321  sudo ansible-playbook book/sync-host.yml
+  322  ssh clarazhang0625@10.128.0.17
+  323  ssh 10.128.0.17
+  324  ssh 10.128.0.16
+  325  cd /etc/ansible
+  326  sudo ansible-playbook book/sync-host.yml
+  327  cd
+  328  ansible --version
+  329  sudo su
+  330  sudo usermod -aG sudo <username>
+  331  sudo usermod -aG sudo clarazhang0625
+  332  sudo visudo
+  333  ls 
+  334  cd /etc/
+  335  ls
+  336  cd
+  337  cd /usr/bin/
+  338  ls
+  339  ls ansible-playbook
+  340  cd
+  341  cd /etc/ansible
+  342  ls
+  343  cd
+  344  which ansible
+  345  cd /usr/local/bin/ansible
+  346  cd /usr/local/bin
+  347  ls
+  348  cd
+  349  sudo visudo
+  350  history
+  351  cd /etc/ansible
+  352  ansible-playbook book/sync-host.yml
+  353  cd
+  354  history
+  355  cd /etc/ansible
+  356  ansible-playbook book/install-hadoop.yml
+  357  ls
+  358  mkdir -p repo
+  359  sudo mkdir -p repo
+  360  cd repo
+  361  sudo mkdir -p hadoop
+  362  cd hadoop
+  363  sudo wget https://dlcdn.apache.org/zookeeper/zookeeper-3.6.4/apache-zookeeper-3.6.4-bin.tar.gz
+  364  sudo tar -xzf apache-zookeeper-3.6.4-bin.tar.gz
+  365  wget https://downloads.apache.org/hadoop/common/hadoop-3.2.3/hadoop-3.2.3.tar.gz
+  366  sudo wget https://downloads.apache.org/hadoop/common/hadoop-3.2.3/hadoop-3.2.3.tar.gz
+  367  sudo tar xzf hadoop-3.2.3.tar.gz
+  368  sudo wget https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.7%2B7/OpenJDK17U-debugimage_aarch64_linux_hotspot_17.0.7_7.tar.gz
+  369  sudo tar xzf OpenJDK17U-debugimage_aarch64_linux_hotspot_17.0.7_7.tar.gz
+  370  sudo wget http://www.cs.tohoku-gakuin.ac.jp/pub/Tools/OpenJDK/JDK8-HotSpot/OpenJDK8U-jdk_x64_linux_hotspot_8u372b07.tar.gz
+  371  sudo tar xzf OpenJDK8U-jdk_x64_linux_hotspot_8u372b07.tar.gz
+  372  cd ../../
+  373  ansible-playbook book/install-hadoop.yml
+  374  cd etc/ansible
+  375  cd /etc/ansible
+  376  ansible-playbook book/install-hadoop.yml
+  377  sudo nano book/install-hadoop.yml
+  378  cd book
+  379  ansible-playbook install-hadoop.yml
+  380  sudo nano install-hadoop.yml
+  381  ansible-playbook -vvv install-hadoop.yml
+  382  cd ../
+  383  sudo nano book/sync-host.yml
+  384  ansible-playbook book/install-hadoop.yml
+  385  history
+  386  ssh clarazhang0625@10.128.0.17
+  387  sudo nano book/install-hadoop.yml
+  388  cd book
+  389  ansible-playbook install-hadoop.yml
+  390  sudo nano install-hadoop.yml
+  391  ansible-playbook install-hadoop.yml
+  392  curl https://bootstrap.pypa.io/pip/2.7/get-pip.py -o get-pip.py
+  393  cd
+  394  curl https://bootstrap.pypa.io/pip/2.7/get-pip.py -o get-pip.py
+  395  python get-pip.py --user
+  396  pip -V
+  397  wget https://releases.ansible.com/ansible/ansible-2.9.27.tar.gz
+  398  tar -xf ansible-2.9.27.tar.gz
+  399  pushd ansible-2.9.27/
+  400  python setup.py build
+  401  sudo python setup.py install
+  402  popd
+  403  cd book
+  404  ansible-playbook install-hadoop.yml
+  405  cd ~
+  406  la
+  407  ls
+  408  cd hosts
+  409  sudo nano hosts
+  410  sudo apt install -y gcc glibc-devel zlib-devel rpm-build openssl-devel
+  411  sudo apt install -y python-devel python-yaml python-jinja2 python2-jmespath
+  412  cd /etc
+  413  cd ansible
+  414  ls
+  415  cd repo
+  416  cd hadoop
+  417  ls
+  418  cd ~
+  419  cd repo
+  420  cd hadoop
+  421  ls
+  422  cd ~
+  423  cd book
+  424  ansible-playbook install-hadoop.yml
+  425  cd ../
+  426  cd repo/hadoop
+  427  tar -xf OpenJDK17U-jdk_x64_linux_hotspot_17.0.2_8.tar.gz
+  428  history
+  429  ls
+  430  cd ../
+  431  cd book
+  432  sudo nano install-hadoop.yml
+  433  ansible-playbook install-hadoop.yml
+  434  ansible-playbook sync-host.yml
+  435  ansible-playbook install-hadoop.yml
+  436  cd ../repo/hadoop
+  437  ls
+  438  cd ../../book
+  439  sudo nano install-hadoop.yml
+  440  cd
+  441  ls
+  442  cd ansible-2.9.27
+  443  ls
+  444  cd
+  445  cd conf
+  446  ls
+  447  sudo nano ansible.cfg
+  448  cd
+  449  sudo nano ansible.cfg
+  450  cd repo
+  451  ls
+  452  cd hadoop
+  453  ls
+  454  cd book
+  455  ls
+  456  cd ~
+  457  cd book
+  458  ls
+  459  nano vars.yml
+  460  y
+  461  nano install-hadoop.yml
+  462  cd
+  463  pip -V
+  464  ansible --version
+  465  nano hosts
+  466  cd book
+  467  ansible-playbook install-hadoop.yml
+  468  ansible --version
+  469  cd ~/.ssh/
+  470  ls
+  471  ssh-add -l
+  472  ssh admin@my.hadoop1
+  473  ssh clarazhang0625@my.hadoop1
+  474  ansible-playbook book/config-zk.yml
+  475  nano book/config-zk.yml
+  476  cd
+  477  nano hosts
+  478  nano book/config-zk.yml
+  479  ansible-playbook book/config-zk.yml
+  480  ansible-playbook book/config-hadoop.yml
+  481  ansible journalnodes -m shell -a 'source /etc/profile && nohup hdfs --daemon start journalnode'
+  482  ansible journalnodes -m shell -a 'sudo -- bash -c ". /etc/profile && nohup hdfs --daemon start journalnode"'
+  483  ansible journalnodes -m shell -a 'sudo mkdir -p /opt/hadoop/pid /data/hadoop/logs'
+  484  ansible journalnodes -m shell -a 'sudo -- bash -c ". /etc/profile && nohup hdfs --daemon start journalnode"'
+  485  cd /data/hadoop/logs
+  486  cd etc/profile
+  487  cd etc
+  488  cd /etc
+  489  ls
+  490  cd profile
+  491  cd
+  492  nano hosts
+  493  ansible journalnodes -m shell -a 'sudo -- bash -c "source /etc/profile && jps | grep JournalNode"'
+  494  ansible journalnodes -b -m shell -a 'source /etc/profile && jps | grep JournalNode'
+  495  ls
+  496  cd book
+  497  ls
+  498  cd
+  499  ansible journalnodes -b -m shell -a '. /etc/profile && jps | grep JournalNode'
+  500  ansible-playbook book/config-zk.yml
+  501  ansible-playbook book/config-hadoop.yml
+  502  ansible 'namenodes[0]' -b -m shell -a '. /etc/profile && hdfs namenode -format'
+  503  ansible journalnodes -b -m shell -a 'source /etc/profile && jps | grep JournalNode'
+  504  cd hosts
+  505  nano hosts
+  506  ansible-playbook book/install-hadoop.yml
+  507  ansible-playbook book/config-zk.yml
+  508  ansible-playbook book/config-hadoop.yml
+  509  ansible journalnodes -b -m shell -a 'source /etc/profile && jps | grep JournalNode'
+  510  ansible journalnodes -b -m shell -a 'sudo chmod 777 /opt/hadoop/pid  && source /etc/profile && jps | grep JournalNode'
+  511  nano hosts
+  512  source /etc/profile
+  513  ansible journalnodes -m shell -a 'sudo -- bash -c ". /etc/profile && nohup hdfs --daemon start journalnode"'
+  514  ansible journalnodes -m shell -a "source /etc/profile && jps | grep JournalNode"
+  515  ansible journalnodes -m shell -a 'sudo -- bash -c ". /etc/profile && jps | grep JournalNode"
+  516  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && hdfs namenode -format'
+  517  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && hdfs namenode -format"'
+  518  nano book/install-hadoop.yml
+  519  nano conf/hdft-site.xml
+  520  nano conf/hdfs-site.xml
+  521  nano book/install-hadoop.yml
+  522  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && hdfs namenode -format"'
+  523  nano /opt/apache/hadoop-3.2.3/etc/hadoop/hdfs-site.xml
+  524  nano conf/hadoop/hdfs-site.xml
+  525  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && hdfs namenode -format"'
+  526  history
+  527  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && hdfs namenode -format"'
+  528  nano hosts
+  529  ansible journalnodes -m shell -a 'sudo -- bash -c ". /etc/profile && nohup hdfs --daemon start journalnode"'
+  530  ansible journalnodes -m shell -a 'sudo -- bash -c ". /etc/profile && jps | grep JournalNode"
+  531  ansible journalnodes -m shell -a 'source /etc/profile && jps | grep JournalNode'
+  532  ping my.hadoop2
+  533  telnet my.hadoop2 8485
+  534  netstat -tuln | grep 8485
+  535  sudo ufw allow 8485
+  536  sudo iptables -A INPUT -p tcp --dport 8485 -j ACCEPT
+  537  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && hdfs namenode -format"'
+  538  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && nohup hdfs --daemon start namenode"'
+  539  ansible 'namenodes[1:]' -m shell -a 'sudo -- bash -c ". /etc/profile && hdfs namenode -bootstrapStandby"'
+  540  ansible 'namenodes[1:]' -m shell -a 'sudo -- bash -c ". /etc/profile && nohup hdfs --daemon start namenode"'
+  541  ansible datanodes -m shell -a 'sudo -- bash -c ". /etc/profile && nohup hdfs --daemon start datanode"'
+  542  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && hdfs haadmin -getServiceState nn1"'
+  543  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && hdfs haadmin -getServiceState nn2"'
+  544  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && hdfs zkfc -formatZK"'
+  545  systemctl status zookeeper
+  546  ps aux | grep zookeeper
+  547  ansible-playbook book/config-zk.yml
+  548  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && hdfs zkfc -formatZK"'
+  549  nano hosts
+  550  ansible-playbook book/config-zk.yml
+  551  ansible-playbook book/config-hadoop.yml
+  552  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && hdfs haadmin -getServiceState nn2"'
+  553  telnet 10.128.0.17 2181
+  554  nano hosts
+  555  nano book/config-zk.yml
+  556  ansible-playbook book/config-zk.yml
+  557  nano book/config-zk.yml
+  558  ansible-playbook book/config-zk.yml
+  559  telnet 10.128.0.17 2181
+  560  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && hdfs zkfc -formatZK"'
+  561  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && stop-dfs.sh"'
+  562  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && \
+  563  export HDFS_NAMENODE_USER=hdfs && \
+  564  export HDFS_DATANODE_USER=hdfs && \
+  565  export HDFS_JOURNALNODE_USER=hdfs && \
+  566  export HDFS_ZKFC_USER=hdfs && \
+  567  stop-dfs.sh"'
+  568  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && export HDFS_NAMENODE_USER=hdfs && export HDFS_DATANODE_USER=hdfs && export HDFS_JOURNALNODE_USER=hdfs && export HDFS_ZKFC_USER=hdfs && stop-dfs.sh"'
+  569  nano conf/hadoop/core-site.xml
+  570  nano book/vars.yml
+  571  nano book/config-hadoop.yml
+  572  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && \
+  573  export HDFS_NAMENODE_USER=hdfs && \
+  574  export HDFS_DATANODE_USER=hdfs && \
+  575  export HDFS_JOURNALNODE_USER=hdfs && \
+  576  export HDFS_ZKFC_USER=hdfs && \
+  577  stop-dfs.sh"'
+  578  ssh my.hadoop1
+  579  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && stop-dfs.sh"'
+  580  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && \
+  581  export HDFS_NAMENODE_USER=hdfs && \
+  582  export HDFS_DATANODE_USER=hdfs && \
+  583  export HDFS_JOURNALNODE_USER=hdfs && \
+  584  export HDFS_ZKFC_USER=hdfs && \
+  585  stop-dfs.sh"'
+  586  nano hosts
+  587  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && stop-dfs.sh"'
+  588  nano hosts
+  589  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && stop-dfs.sh"'
+  590  nano hosts
+  591  nano conf/hadoop/hdfs-site.xml
+  592  ansible 'namenodes[0]' -m shell -a 'source /etc/profile && stop-dfs.sh' --become --become-method=sudo --become-user=root
+  593  ansible 'namenodes[0]' -m shell -a '/bin/bash -c ". /etc/profile && stop-dfs.sh"' --become --become-method=sudo --become-user=root
+  594  nano conf/hadoop/hdfs-site.xml
+  595  nano conf/hadoop/yarn-site.xml
+  596  history
+  597  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && stop-dfs.sh"'
+  598  export HDFS_NAMENODE_USER="root"
+  599  export HDFS_DATANODE_USER="root"
+  600  export HDFS_JOURNALNODE_USER="root"
+  601  export HDFS_ZKFC_USER="root"
+  602  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && stop-dfs.sh"'
+  603  ansible localhost -m lineinfile -a 'dest=~/.bashrc line="export HDFS_NAMENODE_USER=hadoop"' --become --become-method=sudo --become-user=<username>
+  604  ansible localhost -m lineinfile -a 'dest=~/.bashrc line="export HDFS_NAMENODE_USER=hadoop"' --become --become-method=sudo --become-user=root
+  605  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && stop-dfs.sh"'
+  606  ansible localhost -m lineinfile -a 'dest=~/.bashrc line="export HDFS_NAMENODE_USER=root"' --become --become-method=sudo --become-user=clarazhang0625
+  607  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && stop-dfs.sh"'
+  608  ls
+  609  cd repo/hadoop
+  610  ls
+  611  cd hadoop-3.2.3
+  612  ls
+  613  cd etc
+  614  ls
+  615  cd hadoop
+  616  ls
+  617  nano hadoop-env.sh 
+  618  sudo nano hadoop-env.sh
+  619  cd
+  620  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && stop-dfs.sh"'
+  621  clarazhang0625@root:~/repo/hadoop$ cd hadoop-3.2.3
+  622  sudo nano ~/.bashrc
+  623  cd /repo/hadoop/hadoop-3.2.3/etc/hadoop
+  624  cd repo/hadoop/hadoop-3.2.3/etc/hadoop
+  625  nano hadoop-env.sh
+  626  cd
+  627  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && stop-dfs.sh"'
+  628  cd repo/hadoop/hadoop-3.2.3/etc/hadoop
+  629  cd
+  630  source ~/.bashrc
+  631  cd repo/hadoop/hadoop-3.2.3/etc/hadoop
+  632  cd
+  633  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && stop-dfs.sh"'
+  634  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && export HDFS_NAMENODE_USER=hdfs && export HDFS_DATANODE_USER=hdfs && export HDFS_JOURNALNODE_USER=hdfs && export HDFS_ZKFC_USER=hdfs && stop-dfs.sh"'
+  635  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && export HDFS_NAMENODE_USER=root && export HDFS_DATANODE_USER=root&& export HDFS_JOURNALNODE_USER=root && export HDFS_ZKFC_USER=root && stop-dfs.sh"'
+  636  my.hadoop1 | CHANGED | rc=0 >>
+  637  Stopping namenodes on [my.hadoop1 my.hadoop2]
+  638  my.hadoop1: Warning: Permanently added 'my.hadoop1,10.128.0.17' (ECDSA) to the list of known hosts.
+  639  my.hadoop1: root@my.hadoop1: Permission denied (publickey).
+  640  my.hadoop2: Warning: Permanently added 'my.hadoop2,10.128.0.18' (ECDSA) to the list of known hosts.
+  641  my.hadoop2: root@my.hadoop2: Permission denied (publickey).
+  642  Stopping datanodes
+  643  my.hadoop2: root@my.hadoop2: Permission denied (publickey).
+  644  my.hadoop3: Warning: Permanently added 'my.hadoop3,10.128.0.19' (ECDSA) to the list of known hosts.
+  645  my.hadoop3: root@my.hadoop3: Permission denied (publickey).
+  646  my.hadoop4: Warning: Permanently added 'my.hadoop4,10.128.0.20' (ECDSA) to the list of known hosts.
+  647  my.hadoop4: root@my.hadoop4: Permission denied (publickey).
+  648  my.hadoop1: root@my.hadoop1: Permission denied (publickey).
+  649  Stopping journal nodes [my.hadoop3 my.hadoop2 my.hadoop1]
+  650  my.hadoop3: root@my.hadoop3: Permission denied (publickey).
+  651  my.hadoop1: root@my.hadoop1: Permission denied (publickey).
+  652  my.hadoop2: root@my.hadoop2: Permission denied (publickey).
+  653  Stopping ZK Failover Controllers on NN hosts [my.hadoop1 my.hadoop2]
+  654  my.hadoop1: root@my.hadoop1: Permission denied (publickey).
+  655  my.hadoop2: root@my.hadoop2: Permission denied (publickey).mesg: ttyname failed: Inappropriate ioctl for device
+  656  mesg: ttyname failed: Inappropriate ioctl for device
+  657  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && export HDFS_NAMENODE_USER=clarazhang0625 && export HDFS_DATANODE_USER=clarazhang0625 && export HDFS_JOURNALNODE_USER=clarazhang0625 && export HDFS_ZKFC_USER=clarazhang0625 && stop-dfs.sh"'
+  658  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && export HDFS_NAMENODE_USER=clarazhang0625 && export HDFS_DATANODE_USER=clarazhang0625 && export HDFS_JOURNALNODE_USER=clarazhang0625 && export HDFS_ZKFC_USER=clarazhang0625 && start-dfs.sh"'
+  659  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && hdfs haadmin -getServiceState nn1"'
+  660  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && hdfs haadmin -getServiceState nn2"'
+  661  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && export HDFS_NAMENODE_USER=clarazhang0625 && export HDFS_DATANODE_USER=clarazhang0625 && export HDFS_JOURNALNODE_USER=clarazhang0625 && export HDFS_ZKFC_USER=clarazhang0625 && start-dfs.sh"'
+  662  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && hdfs haadmin -getServiceState nn1"'
+  663  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && hdfs haadmin -transitionToActive nn1"'
+  664  history
+  665  ansible-playbook book/config-zk.yml
+  666  history
+  667  ansible journalnodes -m shell -a 'sudo -- bash -c ". /etc/profile && nohup hdfs --daemon start journalnode"'
+  668  sudo truncate -s 0 /opt/hadoop/pid/hadoop-root-journalnode.pid
+  669  sudo truncate -s 0 /opt/hadoop/pid
+  670  ansible journalnodes -m shell -a 'sudo -- bash -c ". /etc/profile && nohup hdfs --daemon start journalnode"'
+  671  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && export HDFS_NAMENODE_USER=clarazhang0625 && export HDFS_DATANODE_USER=clarazhang0625 && export HDFS_JOURNALNODE_USER=clarazhang0625 && export HDFS_ZKFC_USER=clarazhang0625 && stop-dfs.sh"'
+  672  ansible journalnodes -m shell -a 'sudo -- bash -c ". /etc/profile && nohup hdfs --daemon start journalnode"'
+  673  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && export HDFS_NAMENODE_USER=clarazhang0625 && export HDFS_DATANODE_USER=clarazhang0625 && export HDFS_JOURNALNODE_USER=clarazhang0625 && export HDFS_ZKFC_USER=clarazhang0625 && start-dfs.sh"'
+  674  ps aux | grep zkfc
+  675  sudo kill 5572
+  676  sudo kill 14860
+  677  sudo kill 23530
+  678  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && export HDFS_NAMENODE_USER=clarazhang0625 && export HDFS_DATANODE_USER=clarazhang0625 && export HDFS_JOURNALNODE_USER=clarazhang0625 && export HDFS_ZKFC_USER=clarazhang0625 && start-dfs.sh"'
+  679  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && hdfs haadmin -getServiceState nn1"'
+  680  ssh my.hadoop1
+  681  nano config/hadoop/hdfs-site.yml
+  682  cd conf
+  683  cd hadoop
+  684  ls
+  685  nano hdfs-site.xml
+  686  cd
+  687  hdfs --daemon start fencing nn1
+  688  hdfs version
+  689  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && hdfs haadmin -failover nn1 nn2"'
+  690  nano conf/hadoop/hdfs-site.xml
+  691  history
+  692  ansible-playbook book/config-zk.yml
+  693  ansible journalnodes -m shell -a 'source /etc/profile && nohup hdfs --daemon start journalnode'
+  694  ansible journalnodes -m shell -a 'sudo -- bash -c ". /etc/profile && nohup hdfs --daemon start journalnode"'
+  695  ansible 'journalnodes' -m shell -a 'sudo -- bash -c ". /etc/profile && stop-journalnode.sh"'
+  696  ansible journalnodes -m shell -a 'sudo -- bash -c ". /etc/profile && nohup hdfs --daemon stop journalnode"'
+  697  ansible journalnodes -m shell -a 'sudo -- bash -c ". /etc/profile && nohup hdfs --daemon start journalnode"'
+  698  ansible journalnodes -m shell -a 'sudo -- bash -c ". /etc/profile && nohup hdfs --daemon stop journalnode"'
+  699  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && hdfs namenode -format"'
+  700  ansible datanodes -m shell -a 'sudo -- bash -c ". /etc/profile && nohup hdfs --daemon start datanode"'
+  701  ansible datanodes -m shell -a 'sudo -- bash -c ". /etc/profile && nohup hdfs --daemon stop datanode"'
+  702  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && nohup hdfs --daemon stop namenode"'
+  703  ansible 'namenodes[1:]' -m shell -a 'sudo -- bash -c ". /etc/profile && nohup hdfs --daemon stop namenode"'
+  704  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && hdfs haadmin -getServiceState nn1"'
+  705  ansible-playbook book/config-zk.yml
+  706  ansible journalnodes -m shell -a 'sudo -- bash -c ". /etc/profile && nohup hdfs --daemon stop journalnode"'
+  707  ansible journalnodes -m shell -a 'sudo -- bash -c ". /etc/profile && jps | grep JournalNode"'
+  708  jps | grep JournalNode
+  709  ansible journalnodes -m shell -a 'sudo -- bash -c ". /etc/profile && jps | grep JournalNode"'
+  710  ansible journalnodes -m shell -a 'sudo -- bash -c ". /etc/profile && nohup hdfs --daemon start journalnode"'
+  711  ansible journalnodes -m shell -a 'sudo -- bash -c ". /etc/profile && jps | grep JournalNode"'
+  712  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && hdfs namenode -format"'
+  713  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && nohup hdfs --daemon start namenode"'
+  714  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && jps | grep NameNode"'
+  715  ansible 'namenodes[1:]' -m shell -a 'sudo -- bash -c ". /etc/profile && hdfs namenode -bootstrapStandby"'
+  716  ansible 'namenodes[1:]' -m shell -a 'sudo -- bash -c ". /etc/profile && nohup hdfs --daemon start namenode"'
+  717  ansible 'namenodes[1:]' -m shell -a 'sudo -- bash -c ". /etc/profile && jps | grep NameNod"'
+  718  ansible 'namenodes[1:]' -m shell -a 'sudo -- bash -c ". /etc/profile && jps | grep NameNode"'
+  719  ansible datanodes -m shell -a 'sudo -- bash -c ". /etc/profile && nohup hdfs --daemon start datanode"'
+  720  ansible datanodes -m shell -a 'sudo -- bash -c ". /etc/profile && jps | grep DataNode"'
+  721  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && hdfs haadmin -getServiceState nn1"'
+  722  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && hdfs haadmin -getServiceState nn2"'
+  723  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && hdfs zkfc -formatZK"'
+  724  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && stop-dfs.sh"'
+  725  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && export HDFS_NAMENODE_USER=clarazhang0625 && export HDFS_DATANODE_USER=clarazhang0625 && export HDFS_JOURNALNODE_USER=clarazhang0625 && export HDFS_ZKFC_USER=clarazhang0625 && stop-dfs.sh"'
+  726  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && export HDFS_NAMENODE_USER=clarazhang0625 && export HDFS_DATANODE_USER=clarazhang0625 && export HDFS_JOURNALNODE_USER=clarazhang0625 && export HDFS_ZKFC_USER=clarazhang0625 && start-dfs.sh"'
+  727  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && hdfs haadmin -getServiceState nn1"'
+  728  nano hosts
+  729  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && hdfs haadmin -getServiceState nn2"'
+  730  nano hosts
+  731  sudo ufw status
+  732  sudo ufw disable
+  733  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && export HDFS_NAMENODE_USER=clarazhang0625 && export HDFS_DATANODE_USER=clarazhang0625 && export HDFS_JOURNALNODE_USER=clarazhang0625 && export HDFS_ZKFC_USER=clarazhang0625 && start-dfs.sh"'
+  734  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && hdfs haadmin -getServiceState nn1"'
+  735  sudo systemctl disable ufw
+  736  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && export HDFS_NAMENODE_USER=clarazhang0625 && export HDFS_DATANODE_USER=clarazhang0625 && export HDFS_JOURNALNODE_USER=clarazhang0625 && export HDFS_ZKFC_USER=clarazhang0625 && stop-dfs.sh"'
+  737  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && export HDFS_NAMENODE_USER=clarazhang0625 && export HDFS_DATANODE_USER=clarazhang0625 && export HDFS_JOURNALNODE_USER=clarazhang0625 && export HDFS_ZKFC_USER=clarazhang0625 && start-dfs.sh"'
+  738  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && hdfs haadmin -getServiceState nn1"'
+  739  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && hdfs haadmin -getServiceState nn2"'
+  740  nano conf/hadoop/hdfs-site.xml
+  741  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && hdfs haadmin -getServiceState nn2"'
+  742  ansible 'ActiveNameNode' -m shell -a 'sudo -- bash -c ". /etc/profile && hdfs haadmin -failover nn2 nn1"'
+  743  ansible 'ActiveNameNode' -m shell -a 'sudo -- bash -c ". /etc/profile && hdfs haadmin -failover my.hadoop1 my.hadoop1 "'
+  744  ansible 'ActiveNameNode' -m shell -a 'sudo -- bash -c ". /etc/profile && hdfs haadmin -failover my.hadoop1 my.hadoop2"'
+  745  ansible 'ActiveNameNode' -m shell -a 'sudo -- bash -c ". /etc/profile && hdfs haadmin -failover 10.128.0.18 10.128.0.17"'
+  746  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && hdfs haadmin -failover 10.128.0.18 10.128.0.17"'
+  747  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && hdfs haadmin -failover namenodes[1] namenodes[0]"'
+  748  ansible 'namenodes[1]' -m shell -a 'sudo -- bash -c ". /etc/profile && hdfs haadmin -getServiceState nn2"'
+  749  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && jps | grep FailoverController"'
+  750  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && start-yarn.sh"'
+  751  ansible 'hadoop_nodes' -m shell -a 'sudo -- bash -c ". /etc/profile && jps | grep Manager"'
+  752  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && yarn rmadmin -getServiceState rm1"'
+  753  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && yarn rmadmin -getServiceState rm2"'
+  754  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && hdfs haadmin -getServiceState nn1"'
+  755  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && hdfs haadmin -getServiceState nn2"'
+  756  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && hdfs haadmin -failover nn1 nn2"'
+  757  ansible 'namenodes[0]' -b -m shell -a 'source /etc/profile && hdfs haadmin -failover nn1 nn2'
+  758  ansible 'namenodes[0]' -b -m shell -a '. /etc/profile && hdfs haadmin -failover nn1 nn2'
+  759  ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile && hdfs zkfc -formatZK"'
+  760  ansible 'hadoop_nodes' -m shell -a 'sudo -- bash -c ". /etc/profile && jps | grep Manager"'
+  761  ansible 'hadoop_nodes' -m shell -a 'sudo -- bash -c ". /etc/profile && jps"'
+  762  historyhistory
+  763  history
+  764  cd repo/hadoop
+  765  ls
+  766  cd
+  767  ls
+  768  cd ansible-2.9.27
+  769  ls
+  770  cd
+  771  nano hosts
+  772  nano ansible.cfg
+  773  cd book
+  774  ls
+  775  nano config-hadoop.yml
+  776  cat config-hadoop.yml
+  777  cat config-zk.yml 
+  778  cat install-hadoop.yml
+  779  cat sync-host.yml
+  780  cat vars.yml
+  781  cd ../
+  782  ls
+  783  cd conf
+  784  ls
+  785  cd hadoop
+  786  ls
+  787  cat core-site.xml
+  788  cat hdfs-site.xml 
+  789  cat mapred-site.xml 
+  790  cat workers
+  791  cat yarn-site.xml
+  792  cd ../
+  793  cd zk
+  794  ls
+  795  cat myid
+  796  cat zoo.cfg
+  797  cd ../../
+  798  cd repo
+  799  ls
+  800  cd hadoop
+  801  ls
+  802  history
+clarazhang0625@root:~$ 
