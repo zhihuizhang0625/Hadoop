@@ -2,7 +2,7 @@
 <h1 id="ha模式hadoop部署">HA模式Hadoop部署</h1>
 <h1 id="gce-vm配置">GCE VM配置</h1>
 <ul>
-<li>需要在google cloud engine上开5台ubuntu VM, 一台作为中控机配置ansible, 其他四台受控机在运行过程中也需要全部开启。</li>
+<li>需要在google cloud engine上开5台ubuntu VM, 一台作为中控机配置ansible, 其他四台受控机在运行过程中也需要全部开启。防火墙http和https都需要选择allow</li>
 </ul>
 <h1 id="中控机配置">中控机配置</h1>
 <h2 id="安装依赖">安装依赖</h2>
