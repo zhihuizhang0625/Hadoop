@@ -765,28 +765,36 @@ ansible-playbook book/config-hadoop.yml
 <p>然后需要建立/opt/hadoop/pid directory并修改权限</p>
 <pre><code>sudo chmod 777 /opt/hadoop/pid
 </code></pre>
-<pre><code>ansible journalnodes -m shell -a 'sudo -- bash -c ". /etc/profile &amp;&amp; nohup hdfs --daemon start journalnode"'
-ansible journalnodes -m shell -a 'sudo -- bash -c ". /etc/profile &amp;&amp; jps | grep JournalNode"'
+<pre><code>
+#go into my.hadoop 1,2, and 3 to start zookeeper
+sudo -- bash -c ". /etc/profile && /opt/zookeeper/bin/zkServer.sh start"
 
 telnet my.hadoop2 8485
 netstat -tuln | grep 8485
 sudo ufw allow 8485
 sudo iptables -A INPUT -p tcp --dport 8485 -j ACCEPT
-ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile &amp;&amp; hdfs namenode -format"'
-ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile &amp;&amp; nohup hdfs --daemon start namenode"'
-ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile &amp;&amp; jps | grep NameNode"'
 
-ansible 'namenodes[1:]' -m shell -a 'sudo -- bash -c ". /etc/profile &amp;&amp; hdfs namenode -bootstrapStandby"'
-ansible 'namenodes[1:]' -m shell -a 'sudo -- bash -c ". /etc/profile &amp;&amp; nohup hdfs --daemon start namenode"'
-ansible 'namenodes[1:]' -m shell -a 'sudo -- bash -c ". /etc/profile &amp;&amp; jps | grep NameNode"'
+#go into all journal nodes and start all journal nodes
+sudo -- bash -c ". /etc/profile && /opt/hadoop/bin/hdfs --daemon start journalnode"
+
+#go into namenode 1 and run
+sudo -- bash -c ". /etc/profile && /opt/hadoop/bin/hdfs namenode -format"
+sudo -- bash -c ". /etc/profile && /opt/hadoop/bin/hdfs --daemon start namenode"
+sudo -- bash -c ". /etc/profile && /opt/hadoop/bin/hdfs zkfc -formatZK"
+sudo -- bash -c ". /etc/profile && jps"
+
+#go to the second namenode
+sudo -- bash -c ". /etc/profile && /opt/hadoop/bin/hdfs namenode -bootstrapStandby"
+sudo -- bash -c ". /etc/profile && /opt/hadoop/bin/hdfs --daemon start namenode"
+sudo -- bash -c ". /etc/profile && jps"
+
+#go to the first namenode
+sudo -- bash -c ". /etc/profile && hdfs haadmin -transitionToActive nn1 --forcemanual"
+sudo -- bash -c ". /etc/profile && hdfs haadmin -getServiceState nn1"
+sudo -- bash -c ". /etc/profile && hdfs haadmin -getServiceState nn2"
 
 ansible datanodes -m shell -a 'sudo -- bash -c ". /etc/profile &amp;&amp; nohup hdfs --daemon start datanode"'
 ansible datanodes -m shell -a 'sudo -- bash -c ". /etc/profile &amp;&amp; jps | grep DataNode"'
-
-ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile &amp;&amp; hdfs haadmin -getServiceState nn1"'
-ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile &amp;&amp; hdfs haadmin -getServiceState nn2"'
-
-ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile &amp;&amp; hdfs zkfc -formatZK"'
 
 ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile &amp;&amp; export HDFS_NAMENODE_USER=clarazhang0625 &amp;&amp; export HDFS_DATANODE_USER=clarazhang0625 &amp;&amp; export HDFS_JOURNALNODE_USER=clarazhang0625 &amp;&amp; export HDFS_ZKFC_USER=clarazhang0625 &amp;&amp; stop-dfs.sh"'
 ansible 'namenodes[0]' -m shell -a 'sudo -- bash -c ". /etc/profile &amp;&amp; export HDFS_NAMENODE_USER=clarazhang0625 &amp;&amp; export HDFS_DATANODE_USER=clarazhang0625 &amp;&amp; export HDFS_JOURNALNODE_USER=clarazhang0625 &amp;&amp; export HDFS_ZKFC_USER=clarazhang0625 &amp;&amp; start-dfs.sh"'
